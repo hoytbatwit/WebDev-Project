@@ -1,0 +1,12 @@
+header {
+	display: flex;
+}
+
+.header-link {
+    width: 300px;
+}
+
+
+#global-nav {
+    flex: 1;
+}
