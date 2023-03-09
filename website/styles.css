@@ -1,12 +1,29 @@
-header {
-	display: flex;
+h1 {
+    text-align: center;
 }
 
-.header-link {
-    width: 100px;
+table {
+    width: 100%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: larger;
+    padding: 1em;
 }
 
-
-#global-nav {
-    flex: 1;
+.home {
+    text-align: left;
+    
 }
+
+.about_us {
+    text-align: right;
+}
+
+th {
+    width: 1em;
+}
+
+.search, .search_input{
+    padding: 1em;
+    text-align: center;
+}
+
