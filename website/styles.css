@@ -41,6 +41,9 @@ a:active {
     text-decoration: none;
     color: black;
 }
+body{
+    background-image: url("./Pictures/shapelined-_JBKdviweXI-unsplash.jpg");
+}
 
 /* button{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
