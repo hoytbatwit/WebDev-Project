@@ -24,7 +24,7 @@ table {
     font-size: larger;
     padding: 1em;
     border-bottom: solid 1px;
-    background-color: lightgray;
+    background-color: dimgray;
 }
 
 .home {
@@ -32,6 +32,9 @@ table {
 
 
 
+}
+.announcements{
+    text-align: center;
 }
 
 .about_us {
@@ -57,6 +60,7 @@ a:active {
     text-decoration: none;
     color: black;
 }
+
 body{
     background-image: url("./Pictures/shapelined-_JBKdviweXI-unsplash.jpg");
 }
@@ -88,4 +92,5 @@ footer {
     position: absolute;
     bottom: 0px;
     width: 99%;
+
 }
