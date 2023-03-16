@@ -14,30 +14,34 @@ h3{
     font-weight: bolder;
 }
 
-p{
+.explanation {
     text-align: center;
+    width: 90%;
+    margin: auto;
 }
 
 table {
     width: 100%;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: larger;
-    padding: 1em;
+    padding: 5em;
     border-bottom: solid 1px;
-    background-color: dimgray;
+    background-color: lightgreen;
 }
 
-.home {
+table.head th, table.foot th {
+    padding: 0.5em;
+    width: 1em;
+}
+
+.home, .creators {
     text-align: left;
-
-
-
 }
-.announcements{
+.announcements, .designed_date {
     text-align: center;
 }
 
-.about_us {
+.about_us, .current_date {
     text-align: right;
 }
 
@@ -77,20 +81,21 @@ body{
     background-color: darkgray;
 } */
 
-th {
-    width: 1em;
-}
-
 .search,
 .search_input {
     padding: 1em;
     text-align: center;
+    margin-bottom: 10px;
 }
 
+.query_submit {
+    color: black;
+    background-color: lightgreen;
+    border-radius: 8px;
+}
 
 footer {
     position: absolute;
     bottom: 0px;
-    width: 99%;
-
+    width: 100%;
 }
