@@ -24,7 +24,14 @@
     <table class="foot">
         <th class="creators">Created by: Ethan Penniman, Matthew Fairneny, Nicholas Bragdon, Brian Hoyt</th>
         <th class="announcements">Designed On: 3/6/2023</th>
-        <th class="about_us">Current Date: <!--Javascript variable for current date goes here--> </th>
+        <th class="about_us" id="date">Current Date: <!--Javascript variable for current date goes here--> </th>
     </table>
+    <script>
+        n =  new Date();
+        y = n.getFullYear();
+        m = n.getMonth() + 1;
+        d = n.getDate();
+        document.getElementById("date").innerHTML ="Current Date: " +  m + "/" + d + "/" + y;
+    </script>
 </footer>
 </html>
