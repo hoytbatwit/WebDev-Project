@@ -14,7 +14,7 @@ h3{
     font-weight: bolder;
 }
 
-.index_explanation, .annoucement_updates {
+.index_explanation, .annoucement_updates, .team {
     text-align: center;
     width: 90%;
     margin: auto;
@@ -22,7 +22,7 @@ h3{
 
 table {
     width: 100%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: larger;
     padding: 5em;
     border-bottom: solid 1px;
