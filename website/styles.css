@@ -1,5 +1,15 @@
-h1 {
+body{
+    background-image: url("./Pictures/shapelined-_JBKdviweXI-unsplash.jpg");
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1.website_name {
     text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    color: crimson;
+    font-weight: bolder;
 }
 
 h2{
@@ -10,14 +20,8 @@ h2{
 
 h3{
     text-align: center;
-    text-decoration: underline;
+    text-decoration: none;
     font-weight: bolder;
-}
-
-.index_explanation, .annoucement_updates, .team {
-    text-align: center;
-    width: 70%;
-    margin: auto;
 }
 
 table {
@@ -45,6 +49,54 @@ table.head th, table.foot th {
     text-align: right;
 }
 
+.search {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: x-large;
+}
+
+.search_input {
+    padding: 0.75em;
+    text-align: inherit;
+}
+
+.query_submit {
+    color: black;
+    background-color: lightcoral;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.index_explanation, .annoucement_updates {
+    text-align: justify;
+    width: 60%;
+    margin: auto;
+    background-color: aliceblue;
+    padding: 10px;
+    border: solid grey;
+}
+
+.team {
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    background-color: aliceblue;
+    padding: 10px;
+    border: solid grey;
+}
+
+/* button{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: larger;
+    border-radius: 10px 10px;
+    border-style: solid;
+    background-color: darkgray;
+} */
+/* th:hover{
+    border-radius: 10px 10px;
+    background-color: darkgray;
+} */
+
 a:link {
     text-decoration: none;
     color: black;
@@ -63,35 +115,6 @@ a:hover {
 a:active {
     text-decoration: none;
     color: black;
-}
-
-body{
-    background-image: url("./Pictures/shapelined-_JBKdviweXI-unsplash.jpg");
-}
-
-/* button{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: larger;
-    border-radius: 10px 10px;
-    border-style: solid;
-    background-color: darkgray;
-} */
-/* th:hover{
-    border-radius: 10px 10px;
-    background-color: darkgray;
-} */
-
-.search,
-.search_input {
-    padding: 1em;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.query_submit {
-    color: black;
-    background-color: lightgreen;
-    border-radius: 8px;
 }
 
 footer {
