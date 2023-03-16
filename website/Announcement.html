@@ -18,34 +18,36 @@
         </table>
         <h1>Is It Up?</h1>
     </header>
-    <h2>Website Scheduled Maintenance</h2>
-    <p>No current maintenance is scheduled for IsItUp.com please check back regularly
-        to know when our website will be unavailable due to maintenance.
-    </p>
-    <h2>Thank you from the Team</h2>
-    <p>From the team to you we want to say thank you for supporting our site.
-        Our goal has always been to make finding website outages hassel free and
-        thanks to your support that is exactly what we have been able to do. Thank you
-        all for the support.
-    </p>
-    <h2>Any suggestions for improvement?</h2>
-    <p>We are always interested in suggestions to help improve our website. 
-        If you have anything you want us to change or add please feel free to let us know
-        by emailing us at <a href="mailto: IsItUp@aol.com"><b>IsItUp@aol.com</b></a>
-    </p>
+    <section class="annoucement_updates">
+        <h2>Website Scheduled Maintenance</h2>
+        <p>No current maintenance is scheduled for IsItUp.com please check back regularly
+            to know when our website will be unavailable due to maintenance.
+        </p>
+        <h2>Thank you from the Team</h2>
+        <p>From the team to you we want to say thank you for supporting our site.
+            Our goal has always been to make finding website outages hassel free and
+            thanks to your support that is exactly what we have been able to do. Thank you
+            all for the support.
+        </p>
+        <h2>Any suggestions for improvement?</h2>
+        <p>We are always interested in suggestions to help improve our website. 
+            If you have anything you want us to change or add please feel free to let us know
+            by emailing us at <a href="mailto: IsItUp@aol.com"><b>IsItUp@aol.com</b></a>
+        </p>
+    </section>
+    <footer>
+        <table class="foot">
+            <th class="creators">Created by: Ethan Penniman, Matthew Fairneny, Nicholas Bragdon, Brian Hoyt</th>
+            <th class="designed_date">Designed On: 3/6/2023</th>
+            <th class="current_date" id="date">Current Date: <!--Javascript variable for current date goes here--> </th>
+        </table>
+        <script>
+            n =  new Date();
+            y = n.getFullYear();
+            m = n.getMonth() + 1;
+            d = n.getDate();
+            document.getElementById("date").innerHTML ="Current Date: " +  m + "/" + d + "/" + y;
+        </script>
+    </footer>
 </body>
-<footer>
-    <table class="foot">
-        <th class="creators">Created by: Ethan Penniman, Matthew Fairneny, Nicholas Bragdon, Brian Hoyt</th>
-        <th class="announcements">Designed On: 3/6/2023</th>
-        <th class="about_us" id="date">Current Date: <!--Javascript variable for current date goes here--> </th>
-    </table>
-    <script>
-        n =  new Date();
-        y = n.getFullYear();
-        m = n.getMonth() + 1;
-        d = n.getDate();
-        document.getElementById("date").innerHTML ="Current Date: " +  m + "/" + d + "/" + y;
-    </script>
-</footer>
 </html>
