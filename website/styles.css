@@ -119,6 +119,7 @@ a:active {
 
 footer {
     position: absolute;
+    font-size: small;
     bottom: 0px;
     width: 100%;
 }
