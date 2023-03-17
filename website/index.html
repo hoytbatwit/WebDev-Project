@@ -22,11 +22,11 @@
     </header>
 
     <section class="Main_Content">
-        <form action="#" class="search">
+        <form action="./Website_Search.html" method="GET" class="search">
             <Legend>Enter a Website URL:</Legend>
             <div>
-                <input class="search_input" type="text" placeholder="google.com" name="websiteURL"><br>
-                <button class="query_submit" type="submit" formaction="./Website_Search.html">Submit Query</button>
+                <input id="searchInput" class="search_input" type="text" placeholder="google.com" name="websiteURL"><br>
+                <button class="query_submit" type="submit" >Submit Query</button>
             </div>
         </form>
         <section class="index_explanation">
@@ -56,6 +56,11 @@
             document.getElementById("date").innerHTML ="Current Date: " +  m + "/" + d + "/" + y;
         </script>
     </footer>
+
+    <script>
+        var searchTerm = document.getElementById("searchInput");
+        localStorage.setItem("searchTerm", searchTerm.value);
+    </script>
 </body>
 
 </html>

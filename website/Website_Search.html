@@ -19,6 +19,7 @@
         <h1 class="website_name">Is It Up?</h1>
     </header>
     <section>
+        <h1 id="place" style="text-align: center;"></h1>
         <!--Add content for page here-->
     </section>
     <footer>
@@ -35,5 +36,14 @@
             document.getElementById("date").innerHTML ="Current Date: " +  m + "/" + d + "/" + y;
         </script>
     </footer>
+    <script>
+        //var search = localStorage.getItem("searchTerm");
+        //document.getElementById("place").innerHTML = search;
+        const search = new URLSearchParams(window.location.search);
+        const value = search.get('websiteURL');
+        document.getElementById("place").innerHTML = value + " is up!";
+        console.log(value);
+        //document.getElementById("write").innerHTML = window.location.search;
+    </script>
 </body>
 </html>
