@@ -38,6 +38,11 @@ table.head th, table.foot th {
     width: 1em;
 }
 
+.favicon{
+    width: 25px;
+    
+}
+
 .home, .creators {
     text-align: left;
 }
