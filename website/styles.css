@@ -1,14 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap');
+
+:root{
+    --lg-font: 'Kaisei Tokumin', serif;
+    --sm-font: 'Poppins', sans-serif;
+}
+
 body{
-    background-image: url("./Pictures/shapelined-_JBKdviweXI-unsplash.jpg");
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("./Pictures/background.png");
+    font-family: var(--sm-font);
 }
 
 h1.website_name {
     text-align: center;
     padding-top: 30px;
     padding-bottom: 10px;
-    font-family: 'Courier New', Courier, monospace;
-    color: crimson;
+    font-family: var(--lg-font);
+    color: black;
+    font-size: 5em;
     font-weight: bolder;
 }
 
@@ -24,23 +32,26 @@ h3{
     font-weight: bolder;
 }
 
+.faviconHead {
+    width: 1em;
+    height: 1em;
+}
+.favicon {
+    width: 30px;
+}
+
 table {
     width: 100%;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: larger;
-    padding: 5em;
+    font-family: var(--lg-font);
+    font-size: x-large;
     border-bottom: solid 1px;
-    background-color: lightblue;
+    background-color: white;
 }
 
 table.head th, table.foot th {
     padding: 0.5em;
     width: 1em;
-}
-
-.favicon{
-    width: 25px;
-    
+    padding: 0.8em;
 }
 
 .home, .creators {
@@ -61,15 +72,36 @@ table.head th, table.foot th {
 }
 
 .search_input {
-    padding: 0.75em;
+    padding: 0.75em 4em;
+    margin-top: 0.5em;
     text-align: inherit;
 }
 
 .query_submit {
-    color: black;
-    background-color: lightcoral;
-    border-radius: 8px;
-    margin-top: 10px;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border-radius:10px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:28px;
+	font-weight:bold;
+	padding:20px 64px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.query_submit:hover {
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	background-color:#f6f6f6;
+}
+.query_submit:active {
+	position:relative;
+	top:1px;
 }
 
 .index_explanation, .annoucement_updates {
