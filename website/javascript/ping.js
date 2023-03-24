@@ -4,7 +4,7 @@ var returnStat;
 
 function pingSite2() {
     $.ajax({
-        url: "https://" + value + "/",
+        url: "https://" + value + "/%",
         method: "GET",
         dataType: "jsonp",
         async: false,
@@ -27,7 +27,7 @@ function pingSite2() {
 
 function testPrint(returnStat) {
     if(returnStat == null){
-        console.log("Server is unreachable. Please Check ")
+        document.getElementById("value").innerHTML = "The server is currently unreachable. Please double check your search or try again later."
     }else{
         console.log(returnStat)
     }
