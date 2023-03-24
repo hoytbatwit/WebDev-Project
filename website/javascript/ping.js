@@ -4,7 +4,7 @@ var returnStat;
 
 function pingSite2() {
     $.ajax({
-        url: "https://" + value + "/%",
+        url: "https://" + value + "/",
         method: "GET",
         dataType: "jsonp",
         async: false,

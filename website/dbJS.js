@@ -5,6 +5,7 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(express.static(__dirname));
 
 const db = new sqlite3.Database('mydb.db', (err) => {
     if (err) {
@@ -20,7 +21,7 @@ db.run('CREATE TABLE IF NOT EXISTS test (id INTEGER PRIMARY KEY, siteName TEXT, 
 });
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/dbHTML.html');
+    res.sendFile(__dirname + './database/dbHTML.html');
 });
 
 app.post('/addInfo', (req, res) => {
