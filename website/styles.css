@@ -8,6 +8,9 @@
 body{
     background-image: url("./Pictures/background.png");
     font-family: var(--sm-font);
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 h1.website_name {
@@ -104,22 +107,28 @@ table.head th, table.foot th {
 	top:1px;
 }
 
+#value {
+    padding: 1em;
+    font-size: xx-large;
+    border: white;
+}
+
 .index_explanation, .annoucement_updates {
     text-align: justify;
     width: 60%;
     margin: auto;
-    background-color: aliceblue;
+    background-color: white;
     padding: 10px;
-    border: solid grey;
+    border: solid black 2px;
 }
 
 .team {
     text-align: center;
     width: 60%;
     margin: auto;
-    background-color: aliceblue;
+    background-color: white;
     padding: 10px;
-    border: solid grey;
+    border: solid black 2px;
 }
 
 /* button{
@@ -159,4 +168,13 @@ footer {
     font-size: small;
     bottom: 0px;
     width: 100%;
+}
+
+.history{
+    text-align: center;
+    font-family: var(--lg-font);
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+    text-decoration: underline;
 }
