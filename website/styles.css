@@ -117,18 +117,18 @@ table.head th, table.foot th {
     text-align: justify;
     width: 60%;
     margin: auto;
-    background-color: aliceblue;
+    background-color: white;
     padding: 10px;
-    border: solid grey;
+    border: solid black 2px;
 }
 
 .team {
     text-align: center;
     width: 60%;
     margin: auto;
-    background-color: aliceblue;
+    background-color: white;
     padding: 10px;
-    border: solid grey;
+    border: solid black 2px;
 }
 
 /* button{
