@@ -169,3 +169,12 @@ footer {
     bottom: 0px;
     width: 100%;
 }
+
+.history{
+    text-align: center;
+    font-family: var(--lg-font);
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+    text-decoration: underline;
+}
