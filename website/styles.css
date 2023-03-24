@@ -113,6 +113,11 @@ table.head th, table.foot th {
     border: white;
 }
 
+#data {
+    width: 75%;
+    margin: auto;
+}
+
 .index_explanation, .annoucement_updates {
     text-align: justify;
     width: 60%;
