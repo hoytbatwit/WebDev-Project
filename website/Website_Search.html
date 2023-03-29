@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <script src="./javascript/ping.js"></script>
+    <script src="script.js"></script>
 </head>
-<body onload="pingSite2()">
+<body>
     <header>
         <table class="head">
             <th class="home"><a href="./index.html"><img class="favicon" src="./Pictures/up-and-down-arrows-colored.png" alt="home">Home Page</a></th>
@@ -20,13 +20,8 @@
         <h1 class="website_name">Is It Up?</h1>
     </header>
     <section>
-        <h1 id="value" style="text-align: center;"></h1>
-        <form action="/addInfo" method="POST">
-            <input type="hidden" id="id" name="id">
-            <input type="hidden" id="siteName" name="siteName">
-            <input type="hidden" id="recentDate" name="recentDate">
-            <input type="hidden" id="totalPings" name="totalPings">
-        </form>
+        <h1 id="status-text" style="text-align: center;"></h1>
+        <h1 id="testing"></h1>
     </section>
     <footer>
         <table class="foot">

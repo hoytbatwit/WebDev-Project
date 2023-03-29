@@ -4,35 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Is It Up?</title>
-  <link type="text/css" rel="stylesheet" href="../styles.css">
+  <link type="text/css" rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
 <header>
   <table class="head">
-      <th class="home"><a href="../index.html"><img class="favicon" src="../Pictures/up-and-down-arrows-colored.png" alt="home">Home Page</a></th>
-      <th class="announcements"><a href="../Announcement.html">Announcements</a></th>
-      <th class="about_us"><a href="../About.html">About Us</a></th>
+      <th class="home"><a href="index.html"><img class="favicon" src="./Pictures/up-and-down-arrows-colored.png" alt="home">Home Page</a></th>
+      <th class="announcements"><a href="Announcement.html">Announcements</a></th>
+      <th class="about_us"><a href="About.html">About Us</a></th>
   </table>
-  <h1 class="website_name"><img class="faviconHead" src="../Pictures/up-and-down-arrows-colored.png">Is It Up?</h1>
+  <h1 class="website_name"><img class="faviconHead" src="./Pictures/up-and-down-arrows-colored.png">Is It Up?</h1>
 </header>
 
 <body>
   <h2>Employees</h2>
-  <table id="data">
+  <table id="history-table">
     <thead>
       <tr>
-        <th>User ID</th>
-        <th>Site Name</th>
-        <th>Most Recent Access Date</th>
-        <th>Total Pings</th>
+        <th>Website</th>
+        <th>Status</th>
       </tr>
     </thead>
     <tbody></tbody>
   </table>
 
-<!-- This is where we are trying to post the data to the site -->
-  <script>
+  <!-- <script>
     async function fetchData() {
       const response = await fetch('/userData');
       const data = await response.json();
@@ -51,7 +49,7 @@
     }
 
     fetchData();
-  </script>
+  </script> -->
 
 <footer>
   <table class="foot">
