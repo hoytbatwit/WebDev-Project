@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
           if (data && data.length) {
             data.forEach((record) => {
               const row = document.createElement("tr");
-              row.innerHTML = `<td>${record.website}</td><td>${record.status}</td>`;
+              row.innerHTML = `<td>${record.website}</td><td>${record.status}</td><td>${record.time}</td>`;
               historyTable.querySelector("tbody").appendChild(row);
             });
           }

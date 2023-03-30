@@ -31,14 +31,14 @@ app.get("/check-status", (req, res) => {
     }
 
     let temp = new Date();
-    let tempTime = temp.toLocaleTimeString();
-    console.log(tempTime);
+    let time = temp.toLocaleTimeString();
+    //console.log(tempTime);
 
-    db.run("INSERT INTO Main (website, status, time) VALUES (?, ?, ?)", [website, status, tempTime], (err) => {
+    db.run("INSERT INTO Main (website, status, time) VALUES (?, ?, ?)", [website, status, time], (err) => {
       if (err) {
         return res.status(500).json({ error: err.message });
       }
-      res.json({ website, status, tempTime });
+      res.json({ website, status, time });
     });
   });
 });
