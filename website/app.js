@@ -10,7 +10,7 @@ app.use(express.static(__dirname));
 app.use(express.json());
 
 db.serialize(() => {
-  db.run("CREATE TABLE IF NOT EXISTS Main (id INTEGER PRIMARY KEY, website TEXT, status TEXT)");
+  db.run("CREATE TABLE IF NOT EXISTS Main (id INTEGER PRIMARY KEY, website TEXT, status TEXT, time TEXT)");
 });
 
 app.get("/check-status", (req, res) => {
@@ -30,11 +30,15 @@ app.get("/check-status", (req, res) => {
       status = "online";
     }
 
-    db.run("INSERT INTO Main (website, status) VALUES (?, ?)", [website, status], (err) => {
+    let temp = new Date();
+    let tempTime = temp.toLocaleTimeString();
+    console.log(tempTime);
+
+    db.run("INSERT INTO Main (website, status, time) VALUES (?, ?, ?)", [website, status, tempTime], (err) => {
       if (err) {
         return res.status(500).json({ error: err.message });
       }
-      res.json({ website, status });
+      res.json({ website, status, tempTime });
     });
   });
 });
@@ -63,4 +67,5 @@ app.get("/get-history", (req, res) => {
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
+  console.log('http://localhost:3000')
 });

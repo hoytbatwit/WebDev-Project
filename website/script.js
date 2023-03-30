@@ -6,17 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (checkForm) {
       checkForm.addEventListener("submit", async (e) => {
         e.preventDefault();
-        const website = document.getElementById("website").value;
-        try{
-            let test = encodeURIComponent(website)
-            //console.log(test)
-            //console.log(encodeURIComponent(website))
-            //console.log("Do I run?")
-        
-        }catch(err){
-            console.log(err)
-        }
-        
+        const website = document.getElementById("website").value;  
   
         try {
           const response = await fetch(`/check-status?website=${encodeURIComponent(website)}`);
@@ -38,8 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
   
         if (data) {
           statusText.textContent = `The website ${data.website} is ${data.status}.`;
-          //console.log(`${encodeURIComponent(website)}`);
-          statusText.textContent = `${encodeURIComponent(website)}`;
         } else {
           statusText.textContent = "Error fetching website status.";
         }
