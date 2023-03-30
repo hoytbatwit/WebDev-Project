@@ -32,7 +32,6 @@ app.get("/check-status", (req, res) => {
 
     let temp = new Date();
     let time = temp.toLocaleTimeString();
-    //console.log(tempTime);
 
     db.run("INSERT INTO Main (website, status, time) VALUES (?, ?, ?)", [website, status, time], (err) => {
       if (err) {
