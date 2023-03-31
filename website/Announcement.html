@@ -16,7 +16,12 @@
             <th class="announcements"><a href="./Announcement.html">Announcements</a></th>
             <th class="about_us"><a href="./About.html">About Us</a></th>
         </table>
-        <h1 class="website_name">Is It Up?</h1>
+        <h1 class="website_name">
+          <img
+            class="faviconHead"
+            src="./Pictures/up-and-down-arrows-colored.png"
+          />Is It Up?
+        </h1>
     </header>
     <section class="annoucement_updates">
         <h2>Website Scheduled Maintenance</h2>
@@ -42,7 +47,6 @@
             <th class="current_date" id="date">Current Date: <!--Javascript variable for current date goes here--> </th>
         </table>
         <script>
-            const themeToggle = document.getElementById("theme-toggle");
             const themeStylesheet = document.getElementById("theme-stylesheet");
     
             function loadFunction() {
@@ -56,16 +60,7 @@
                 themeStylesheet.setAttribute("href", "styles.css");
               }
             }
-    
-            themeToggle.addEventListener("click", () => {
-              if (themeStylesheet.getAttribute("href") === "styles.css") {
-                themeStylesheet.setAttribute("href", "dark.css");
-                document.cookie = "theme=darkMode; path=/; samesite=lax";
-              } else {
-                themeStylesheet.setAttribute("href", "styles.css");
-                document.cookie = "theme=lightMode; path=/; samesite=lax";
-              }
-            });
+   
     
             window.onload = loadFunction();
     

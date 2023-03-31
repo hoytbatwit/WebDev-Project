@@ -16,7 +16,12 @@
         <th class="announcements"><a href="Announcement.html">Announcements</a></th>
         <th class="about_us"><a href="About.html">About Us</a></th>
     </table>
-    <h1 class="website_name"><img class="faviconHead" src="./Pictures/up-and-down-arrows-colored.png">Is It Up?</h1>
+    <h1 class="website_name">
+      <img
+        class="faviconHead"
+        src="./Pictures/up-and-down-arrows-colored.png"
+      />Is It Up?
+    </h1>
   </header>
   
   <table id="history-table" class="history-table">
@@ -30,27 +35,6 @@
     <tbody></tbody>
   </table>
 
-  <!-- <script>
-    async function fetchData() {
-      const response = await fetch('/userData');
-      const data = await response.json();
-      const dataTable = document.getElementById('data').getElementsByTagName('tbody')[0];
-      dataTable.innerHTML = '';
-
-      data.forEach(user => {
-        const newRow = dataTable.insertRow();
-        newRow.innerHTML = `
-          <td>${user.id}</td>
-          <td>${user.siteName}</td>
-          <td>${user.recentDate}</td>
-          <td>${user.totalPings}</td>
-        `;
-      });
-    }
-
-    fetchData();
-  </script> -->
-
 <footer>
   <table class="bottom">
       <th class="creators">Created by: Ethan Penniman, Matthew Fairneny, Nicholas Bragdon, Brian Hoyt</th>
@@ -58,7 +42,6 @@
       <th class="current_date" id="date">Current Date: <!--Javascript variable for current date goes here--> </th>
   </table>
   <script>
-    const themeToggle = document.getElementById("theme-toggle");
     const themeStylesheet = document.getElementById("theme-stylesheet");
 
     function loadFunction() {
@@ -72,16 +55,6 @@
         themeStylesheet.setAttribute("href", "styles.css");
       }
     }
-
-    themeToggle.addEventListener("click", () => {
-      if (themeStylesheet.getAttribute("href") === "styles.css") {
-        themeStylesheet.setAttribute("href", "dark.css");
-        document.cookie = "theme=darkMode; path=/; samesite=lax";
-      } else {
-        themeStylesheet.setAttribute("href", "styles.css");
-        document.cookie = "theme=lightMode; path=/; samesite=lax";
-      }
-    });
 
     window.onload = loadFunction();
 
