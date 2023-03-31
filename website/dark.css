@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap');
+
+:root{
+    --lg-font: 'Kaisei Tokumin', serif;
+    --sm-font: 'Poppins', sans-serif;
+}
+
+body{
+    background-image: url("./Pictures/background.png");
+    font-family: var(--sm-font);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+h1.website_name {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-family: var(--lg-font);
+    color: black;
+    font-size: 5em;
+    font-weight: bolder;
+}
+
+h2{
+    text-align: center;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+h3{
+    text-align: center;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.faviconHead {
+    width: 1em;
+    height: 1em;
+}
+.favicon {
+    width: 30px;
+}
+
+table.head, table.bottom {
+    width: 100%;
+    font-family: var(--lg-font);
+    font-size: x-large;
+    border-bottom: solid 1px;
+    background-color: white;
+}
+
+table.history-table {
+    width: 75%;
+    font-family: var(--lg-font);
+    font-size: x-large;
+    border: solid black 2px;
+    background-color: white;
+    margin: auto;
+}
+
+table.head th, table.bottom th {
+    padding: 0.5em;
+    width: 1em;
+    padding: 0.8em;
+}   
+
+table.history-table th {
+    border: solid black 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.home, .creators {
+    text-align: left;
+}
+.announcements, .designed_date {
+    text-align: center;
+}
+
+.about_us, .current_date {
+    text-align: right;
+}
+
+.search {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: x-large;
+}
+
+.search_input {
+    padding: 0.75em 4em;
+    margin-top: 0.5em;
+    text-align: inherit;
+}
+
+.query_submit {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border-radius:10px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:28px;
+	font-weight:bold;
+	padding:20px 64px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.query_submit:hover {
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	background-color:#f6f6f6;
+}
+.query_submit:active {
+	position:relative;
+	top:1px;
+}
+
+.theme_button {
+	box-shadow:inset 0px 1px 0px 0px #97c4fe;
+	background:linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+	background-color:#3d94f6;
+	border-radius:6px;
+	border:1px solid #337fed;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:12px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #1570cd;
+}
+.theme_button:hover {
+	background:linear-gradient(to bottom, #027DC1 5%, #3d94f6 100%);
+	background-color:#027DC1;
+}
+.theme_button:active {
+	position:relative;
+	top:1px;
+}   
+
+#value {
+    padding: 1em;
+    font-size: xx-large;
+    border: white;
+}
+
+#data {
+    width: 75%;
+    margin: auto;
+}
+
+.index_explanation, .annoucement_updates {
+    text-align: justify;
+    width: 60%;
+    margin: auto;
+    background-color: white;
+    padding: 10px;
+    border: solid black 2px;
+}
+
+.team {
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    background-color: white;
+    padding: 10px;
+    border: solid black 2px;
+    margin-bottom: 2em;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+a:active {
+    text-decoration: none;
+    color: black;
+}
+
+footer {
+    position: fixed;
+    font-size: small;
+    bottom: 0px;
+    width: 100%;
+}
+
+.about_footer {
+    position: relative;
+    font-size: small;
+    bottom: 0px;
+    width: 100%;
+}
+
+.history{
+    text-align: center;
+    font-family: var(--lg-font);
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+    text-decoration: underline;
+}

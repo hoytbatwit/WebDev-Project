@@ -32,7 +32,6 @@ app.get("/check-status", (req, res) => {
 
     let temp = new Date();
     let time = temp.toLocaleTimeString();
-
     db.run("INSERT INTO Main (website, status, time) VALUES (?, ?, ?)", [website, status, time], (err) => {
       if (err) {
         return res.status(500).json({ error: err.message });
@@ -42,8 +41,6 @@ app.get("/check-status", (req, res) => {
   });
 });
 
-
-//Add a date/time so the user can see when they last checked
 
 app.get("/get-status", (req, res) => {
   db.get("SELECT *   FROM Main ORDER BY id DESC LIMIT 1", [], (err, row) => {
@@ -55,13 +52,24 @@ app.get("/get-status", (req, res) => {
 });
 
 app.get("/get-history", (req, res) => {
-  db.all("SELECT * FROM Main ORDER BY id DESC", [], (err, rows) => {
+  db.all("SELECT * FROM Main ORDER BY id DESC LIMIT 5", [], (err, rows) => {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
     res.json(rows);
   });
 });
+
+app.get("/get-stats", (req, res) => {
+  let website = req.query.website;
+  db.all("SELECT id FROM Main WHERE website = '" + website + "'", [], (err, rows) => {
+    if(err){
+      console.log(err);
+      return res.status(500).json({error: err.message});
+    }
+    res.json(rows);
+  })
+})
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
