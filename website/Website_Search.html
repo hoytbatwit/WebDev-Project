@@ -30,7 +30,6 @@
             <th class="about_us" id="date">Current Date:  </th>
         </table>
         <script>
-            const themeToggle = document.getElementById("theme-toggle");
             const themeStylesheet = document.getElementById("theme-stylesheet");
     
             function loadFunction() {
@@ -44,16 +43,6 @@
                 themeStylesheet.setAttribute("href", "styles.css");
               }
             }
-    
-            themeToggle.addEventListener("click", () => {
-              if (themeStylesheet.getAttribute("href") === "styles.css") {
-                themeStylesheet.setAttribute("href", "dark.css");
-                document.cookie = "theme=darkMode; path=/; samesite=lax";
-              } else {
-                themeStylesheet.setAttribute("href", "styles.css");
-                document.cookie = "theme=lightMode; path=/; samesite=lax";
-              }
-            });
     
             window.onload = loadFunction();
     
