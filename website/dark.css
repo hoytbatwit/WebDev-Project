@@ -10,7 +10,6 @@ body{
     font-family: var(--sm-font);
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 h1.website_name {
@@ -48,15 +47,15 @@ table.head, table.bottom {
     font-family: var(--lg-font);
     font-size: x-large;
     border-bottom: solid 1px;
-    background-color: white;
+    background-color: #4D4D52;
 }
 
 table.history-table {
     width: 75%;
     font-family: var(--lg-font);
     font-size: x-large;
-    border: solid black 2px;
-    background-color: white;
+    border: solid white 2px;
+    background-color: #4D4D52;
     margin: auto;
 }
 
@@ -67,7 +66,7 @@ table.head th, table.bottom th {
 }   
 
 table.history-table th {
-    border: solid black 2px;
+    border: solid white 2px;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -150,7 +149,7 @@ table.history-table th {
 #value {
     padding: 1em;
     font-size: xx-large;
-    border: white;
+    border: #4D4D52;
 }
 
 #data {
@@ -162,18 +161,18 @@ table.history-table th {
     text-align: justify;
     width: 60%;
     margin: auto;
-    background-color: white;
+    background-color: #4D4D52;
     padding: 10px;
-    border: solid black 2px;
+    border: solid white 2px;
 }
 
 .team {
     text-align: center;
     width: 60%;
     margin: auto;
-    background-color: white;
+    background-color: #4D4D52;
     padding: 10px;
-    border: solid black 2px;
+    border: solid white 2px;
     margin-bottom: 2em;
 }
 
@@ -200,6 +199,7 @@ a:active {
 footer {
     position: fixed;
     font-size: small;
+    color: white;
     bottom: 0px;
     width: 100%;
 }
@@ -214,8 +214,12 @@ footer {
 .history{
     text-align: center;
     font-family: var(--lg-font);
-    color: white;
+    color: black;
     font-size: large;
     font-weight: bolder;
     text-decoration: underline;
+}
+
+.head a{
+    color: white;
 }
