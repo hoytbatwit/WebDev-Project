@@ -3,10 +3,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const statusText = document.getElementById("status-text");
   const historyTable = document.getElementById("history-table");
 
+
+  //work on get ride of https://
   if (checkForm) {
     checkForm.addEventListener("submit", async (e) => {
       e.preventDefault();
-      const website = document.getElementById("website").value;  
+      var website = document.getElementById("website").value;  
+      website = "https://" + website;
 
       try {
         const response = await fetch(`/check-status?website=${encodeURIComponent(website)}`);
