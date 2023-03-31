@@ -6,7 +6,7 @@
 }
 
 body{
-    background-image: url("./Pictures/background.png");
+    background-image: url("./Pictures/darkbackground.png");
     font-family: var(--sm-font);
     background-repeat: no-repeat;
     background-size: cover;
@@ -46,7 +46,6 @@ table.head, table.bottom {
     width: 100%;
     font-family: var(--lg-font);
     font-size: x-large;
-    border-bottom: solid 1px;
     background-color: #4D4D52;
 }
 
@@ -162,8 +161,8 @@ table.history-table th {
     width: 60%;
     margin: auto;
     background-color: #4D4D52;
+    color:white;
     padding: 10px;
-    border: solid white 2px;
 }
 
 .team {
@@ -172,7 +171,6 @@ table.history-table th {
     margin: auto;
     background-color: #4D4D52;
     padding: 10px;
-    border: solid white 2px;
     margin-bottom: 2em;
 }
 
