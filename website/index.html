@@ -1,63 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Is It Up?</title>
-    <link rel="stylesheet" href="styles.css">
+    <link id="theme-stylesheet" rel="stylesheet" href="styles.css" />
     <script src="script.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <table class="head">
-            <th class="home"><a href="./index.html"><img class="favicon" src="./Pictures/up-and-down-arrows-colored.png" alt="home">Home Page</a></th>
-            <th class="announcements"><a href="./Announcement.html">Announcements</a></th>
-            <th class="about_us"><a href="./About.html">About Us</a></th>
-        </table>
-        <h1 class="website_name"><img class="faviconHead" src="./Pictures/up-and-down-arrows-colored.png">Is It Up?</h1>
+      <table class="head">
+        <th class="home">
+          <a href="./index.html"
+            ><img
+              class="favicon"
+              src="./Pictures/up-and-down-arrows-colored.png"
+              alt="home"
+            />Home Page</a
+          >
+        </th>
+        <th class="announcements">
+          <a href="./Announcement.html">Announcements</a>
+        </th>
+        <th class="about_us"><a href="./About.html">About Us</a></th>
+      </table>
+      <h1 class="website_name">
+        <img
+          class="faviconHead"
+          src="./Pictures/up-and-down-arrows-colored.png"
+        />Is It Up?
+      </h1>
     </header>
 
     <section class="Main_Content">
-        <form id="check-form">
-            <Legend>Enter a Website URL:</Legend>
-            <div>
-                <input id="website" class="search_input" type="text" placeholder="google.com" name="website"><br>
-                <button  type="submit" >Find out!</button>
-            </div>
-        </form>
-        <section class="history"><a href="./dbHTML.html">History</a></section>
-        <!-- <section class="index_explanation">
-            <h2>Purpose of Is It Up?</h2>
-            <p>Is It Up? was developed to help internet users having trouble getting to their favorite
-                websites with finding out if that website is having issues and currently down. Please
-                test it out and contact us with any issues.
-            </p>
-            <h2>How To use the Search Engine.</h2>
-            <p>The use of the search engine was designed to be as simple as possible. Just
-                type in the website you are trying to find out if it is down or not and either
-                hit enter on your keyboard or the submit query button to get the results.
-            </p>
-        </section> -->
+      <form id="check-form" class="search">
+        <legend>Enter a Website URL:</legend>
+        <div>
+          <input
+            id="website"
+            class="search_input"
+            type="text"
+            placeholder="google.com"
+            name="website"
+          /><br />
+          <button class="query_submit" type="submit">Find out!</button>
+        </div>
+      </form>
+      <p class="history"><a href="./dbHTML.html">History</a></p>
     </section>
     <footer>
-        <table class="foot">
-            <th class="creators">Created by: Ethan Penniman, Matthew Fairneny, Nicholas Bragdon, Brian Hoyt</th>
-            <th class="designed_date">Designed On: 3/6/2023</th>
-            <th class="current_date" id="date">Current Date: <!--Javascript variable for current date goes here--> </th>
-        </table>
-        <script>
-            n =  new Date();
-            y = n.getFullYear();
-            m = n.getMonth() + 1;
-            d = n.getDate();
-            document.getElementById("date").innerHTML ="Current Date: " +  m + "/" + d + "/" + y;
-        </script>
-    </footer>
-</body>
+      <table class="bottom">
+        <th class="creators">
+          Created by: Ethan Penniman, Matthew Fairneny, Nicholas Bragdon, Brian
+          Hoyt
+        </th>
+        <th class="designed_date">
+          <button id="theme-toggle" class="theme_button">Toggle Dark Mode</button>
+        </th>
+        <th class="current_date" id="date">
+          Current Date:
+          <!--Javascript variable for current date goes here-->
+        </th>
+      </table>
+      <script>
+        const themeToggle = document.getElementById("theme-toggle");
+        const themeStylesheet = document.getElementById("theme-stylesheet");
 
+        function loadFunction() {
+          let theme = document.cookie;
+          console.log(theme);
+          if (theme === "theme=darkMode") {
+            themeStylesheet.setAttribute("href", "dark.css");
+          } else if (theme === "theme=lightMode") {
+            themeStylesheet.setAttribute("href", "styles.css");
+          } else {
+            themeStylesheet.setAttribute("href", "styles.css");
+          }
+        }
+
+        themeToggle.addEventListener("click", () => {
+          if (themeStylesheet.getAttribute("href") === "styles.css") {
+            themeStylesheet.setAttribute("href", "dark.css");
+            document.cookie = "theme=darkMode; path=/; samesite=lax";
+          } else {
+            themeStylesheet.setAttribute("href", "styles.css");
+            document.cookie = "theme=lightMode; path=/; samesite=lax";
+          }
+        });
+
+        window.onload = loadFunction();
+
+        n = new Date();
+        y = n.getFullYear();
+        m = n.getMonth() + 1;
+        d = n.getDate();
+        document.getElementById("date").innerHTML =
+          "Current Date: " + m + "/" + d + "/" + y;
+      </script>
+    </footer>
+  </body>
 </html>
