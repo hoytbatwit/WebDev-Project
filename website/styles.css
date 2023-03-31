@@ -162,19 +162,19 @@ table.history-table th {
     text-align: justify;
     width: 60%;
     margin: auto;
-    background-color: white;
+    color: black;
     padding: 10px;
-    border: solid black 2px;
+    font-weight: bold;
 }
 
 .team {
     text-align: center;
     width: 60%;
     margin: auto;
-    background-color: white;
     padding: 10px;
-    border: solid black 2px;
+    color: black;
     margin-bottom: 2em;
+    font-weight: bold;
 }
 
 a:link {
@@ -217,5 +217,4 @@ footer {
     color: white;
     font-size: large;
     font-weight: bolder;
-    text-decoration: underline;
 }

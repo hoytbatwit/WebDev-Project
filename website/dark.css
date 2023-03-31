@@ -160,18 +160,19 @@ table.history-table th {
     text-align: justify;
     width: 60%;
     margin: auto;
-    background-color: #4D4D52;
     color:white;
     padding: 10px;
+    font-weight: bold;
 }
 
 .team {
     text-align: center;
     width: 60%;
     margin: auto;
-    background-color: #4D4D52;
+    color:white;
     padding: 10px;
     margin-bottom: 2em;
+    font-weight: bold;
 }
 
 a:link {
@@ -215,9 +216,8 @@ footer {
     color: black;
     font-size: large;
     font-weight: bolder;
-    text-decoration: underline;
 }
 
-.head a{
+.head a, .index_explanation a, .annoucement_updates a, .team a{
     color: white;
 }
