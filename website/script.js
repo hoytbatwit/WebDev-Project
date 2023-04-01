@@ -3,8 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const statusText = document.getElementById("status-text");
   const historyTable = document.getElementById("history-table");
 
-
-  //work on get ride of https://
   if (checkForm) {
     checkForm.addEventListener("submit", async (e) => {
       e.preventDefault();
@@ -43,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
           i = i + 1;
         })
       }
-
       document.getElementById("stats").innerHTML = "This website has been searched "+ i + " times recently!"
     })();
   } else if (historyTable) {

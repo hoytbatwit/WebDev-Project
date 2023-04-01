@@ -1,7 +1,9 @@
 const express = require("express");
 const sqlite3 = require("sqlite3").verbose();
-// const db = new sqlite3.Database(":memory:");
+
 const db = new sqlite3.Database("myDatabase.sqlite");
+
+const ping = require("ping");
 
 const { URL } = require("url");
 
@@ -26,24 +28,41 @@ app.get("/check-status", (req, res) => {
   require("dns").resolve(website, (err) => {
     let status = "down";
 
-    if (!err) {
-      status = "online";
-    }
+    var config = {
+      timeout: 4
+    };
 
-    let temp = new Date();
-    let time = temp.toLocaleTimeString();
-    db.run("INSERT INTO Main (website, status, time) VALUES (?, ?, ?)", [website, status, time], (err) => {
-      if (err) {
-        return res.status(500).json({ error: err.message });
-      }
-      res.json({ website, status, time });
-    });
+    if (!err) {
+       ping.sys.probe(website, function(isAlive){
+        if(isAlive){
+          status = "alive";
+          let temp = new Date();
+          let time = temp.toLocaleTimeString();
+          db.run("INSERT INTO Main (website, status, time) VALUES (?, ?, ?)", [website, status, time], (err) => {
+            if (err) {
+              return res.status(500).json({ error: err.message });
+            }
+            res.json({ website, status, time });
+          });
+        }else{
+          status = "down";
+          let temp = new Date();
+          let time = temp.toLocaleTimeString();
+          db.run("INSERT INTO Main (website, status, time) VALUES (?, ?, ?)", [website, status, time], (err) => {
+            if (err) {
+              return res.status(500).json({ error: err.message });
+            }
+            res.json({ website, status, time });
+          });
+        }
+      }, config);
+    }
   });
 });
 
 
 app.get("/get-status", (req, res) => {
-  db.get("SELECT *   FROM Main ORDER BY id DESC LIMIT 1", [], (err, row) => {
+  db.get("SELECT * FROM Main ORDER BY id DESC LIMIT 1", [], (err, row) => {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
@@ -52,7 +71,7 @@ app.get("/get-status", (req, res) => {
 });
 
 app.get("/get-history", (req, res) => {
-  db.all("SELECT * FROM Main ORDER BY id DESC LIMIT 5", [], (err, rows) => {
+  db.all("SELECT * FROM Main ORDER BY id DESC LIMIT 8", [], (err, rows) => {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
