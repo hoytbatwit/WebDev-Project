@@ -61,12 +61,17 @@
 
         window.onload = loadFunction();
 
-        n = new Date();
-        y = n.getFullYear();
-        m = n.getMonth() + 1;
-        d = n.getDate();
-        document.getElementById("date").innerHTML =
-          "Current Date: " + m + "/" + d + "/" + y;
+    //Get the current date
+    n = new Date();
+    //Get current year
+    y = n.getFullYear();
+    //Get current month
+    m = n.getMonth() + 1;
+    //Get current day
+    d = n.getDate();
+    //Combine all data gathered above to display date to the user
+    document.getElementById("date").innerHTML =
+      "Current Date: " + m + "/" + d + "/" + y;
       </script>
 </footer>
 </html>
