@@ -5,6 +5,7 @@ How To Run Is It Up?
 2. Unzip the file and open the folder in Visual Studio Code
 
 3. Open the terminal in VS Code and navigate to the website folder
+
 ![image](https://user-images.githubusercontent.com/54991313/229598025-81a2be4d-f1ff-4cc5-ae9e-f1c7bfade583.png)
 The filepath in your terminal should look similar to what is pictured above.
 
