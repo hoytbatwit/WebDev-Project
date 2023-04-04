@@ -1,4 +1,11 @@
 # WebDev-Project
+Prerequisits to run Is It Up-
+Please have Visual Studio Code installed. If you do not have it installed follow the instructions here:
+https://code.visualstudio.com/
+
+Also you will need Node.js installed in order to run this website locally. If you do not have it installed please install it here:
+https://nodejs.org/en
+
 How To Run Is It Up?
 1. Download our code to a zip folder
 
