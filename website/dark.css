@@ -56,6 +56,7 @@ table.history-table {
     border: solid white 2px;
     background-color: #4D4D52;
     margin: auto;
+    color: white;
 }
 
 table.head th, table.bottom th {
