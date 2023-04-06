@@ -218,3 +218,7 @@ footer {
     font-size: large;
     font-weight: bolder;
 }
+
+table.head, table.bottom {
+    table-layout: fixed
+}

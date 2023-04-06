@@ -222,3 +222,7 @@ footer {
 .head a, .index_explanation a, .annoucement_updates a, .team a{
     color: white;
 }
+
+table.head, table.bottom {
+    table-layout: fixed
+}
