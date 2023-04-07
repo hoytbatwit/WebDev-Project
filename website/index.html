@@ -16,6 +16,7 @@
   </head>
 
   <body>
+    <!--Links to all other webpages-->
     <header>
       <table class="head">
         <th class="home">
@@ -39,7 +40,7 @@
         />Is It Up?
       </h1>
     </header>
-
+    <!--Where the search bar is located along with submit button and history button-->
     <section class="Main_Content">
       <form id="check-form" class="search">
         <legend>Enter a Website URL:</legend>
@@ -56,6 +57,7 @@
       </form>
       <p class="history"><a href="./dbHTML.html">History</a></p>
     </section>
+    <!--Footer to display dark mode button-->
     <footer>
       <table class="bottom">
         <th class="creators">
@@ -75,6 +77,7 @@
         const themeStylesheet = document.getElementById("theme-stylesheet");
 
         function loadFunction() {
+          //get cookies
           let theme = document.cookie;
           console.log(theme);
           if (theme === "theme=darkMode") {
@@ -82,10 +85,12 @@
           } else if (theme === "theme=lightMode") {
             themeStylesheet.setAttribute("href", "styles.css");
           } else {
+            //default to light mode
             themeStylesheet.setAttribute("href", "styles.css");
           }
         }
 
+        //looking for the dark mode/light mode button to be clicked to know when to change css
         themeToggle.addEventListener("click", () => {
           if (themeStylesheet.getAttribute("href") === "styles.css") {
             themeStylesheet.setAttribute("href", "dark.css");

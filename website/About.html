@@ -10,6 +10,7 @@
 
 </head>
 <body>
+  <!--Where we link to other pages-->
     <header>
         <table class="head">
             <th class="home"><a href="./index.html"><img class="favicon" src="./Pictures/up-and-down-arrows-colored.png" alt="home">Home Page</a></th>
@@ -23,6 +24,7 @@
           />Is It Up?
         </h1>
     </header>
+    <!--Where we display the information about us-->
         <section class="team">
             <h2>Meet The Team</h2>
             <h3>Brian Hoyt</h3>
@@ -38,6 +40,7 @@
             <p>Feel free to contact us with any website issues or questions at <a href="mailto: IsItUp@aol.com"><b>IsItUp@aol.com</b></a></p>
     </section>
 </body>
+<!-- Footer for bottom of webpage-->
 <footer class="about_footer">
     <table class="bottom">
         <th class="creators">Created by: Ethan Penniman, Matthew Fairneny, Nicholas Bragdon, Brian Hoyt</th>
@@ -48,6 +51,7 @@
         const themeStylesheet = document.getElementById("theme-stylesheet");
 
         function loadFunction() {
+          //check cookies
           let theme = document.cookie;
           console.log(theme);
           if (theme === "theme=darkMode") {
@@ -55,6 +59,7 @@
           } else if (theme === "theme=lightMode") {
             themeStylesheet.setAttribute("href", "styles.css");
           } else {
+            //default to light mode if no cookies present
             themeStylesheet.setAttribute("href", "styles.css");
           }
         }

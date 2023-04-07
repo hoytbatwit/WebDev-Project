@@ -11,6 +11,7 @@
 
 <body>
   <header>
+    <!--Links to all other webpages-->
     <table class="head">
         <th class="home"><a href="index.html"><img class="favicon" src="./Pictures/up-and-down-arrows-colored.png" alt="home">Home Page</a></th>
         <th class="announcements"><a href="Announcement.html">Announcements</a></th>
@@ -23,7 +24,7 @@
       />Is It Up?
     </h1>
   </header>
-  
+  <!--Where the table will be generated. Table is generated dynamically in javascript file-->
   <table id="history-table" class="history-table">
     <thead>
       <tr>
@@ -45,6 +46,7 @@
     const themeStylesheet = document.getElementById("theme-stylesheet");
 
     function loadFunction() {
+      //check cookies
       let theme = document.cookie;
       console.log(theme);
       if (theme === "theme=darkMode") {
@@ -52,6 +54,7 @@
       } else if (theme === "theme=lightMode") {
         themeStylesheet.setAttribute("href", "styles.css");
       } else {
+        //if no cookies default to light mode
         themeStylesheet.setAttribute("href", "styles.css");
       }
     }

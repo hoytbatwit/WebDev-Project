@@ -10,6 +10,7 @@
     <!-- <script src="app.js"></script> -->
 </head>
 <body>
+  <!--Links to other webpages-->
     <header>
         <table class="head">
             <th class="home"><a href="./index.html"><img class="favicon" src="./Pictures/up-and-down-arrows-colored.png" alt="home">Home Page</a></th>
@@ -23,6 +24,7 @@
           />Is It Up?
         </h1>
     </header>
+    <!--Where we display the announcements-->
     <section class="annoucement_updates">
         <h2>Website Scheduled Maintenance</h2>
         <p>No current maintenance is scheduled for IsItUp.com please check back regularly
@@ -40,6 +42,7 @@
             by emailing us at <a href="mailto: IsItUp@aol.com"><b>IsItUp@aol.com</b></a>
         </p>
     </section>
+    <!--Footer at bottom of page-->
     <footer>
         <table class="bottom">
             <th class="creators">Created by: Ethan Penniman, Matthew Fairneny, Nicholas Bragdon, Brian Hoyt</th>
@@ -50,6 +53,7 @@
             const themeStylesheet = document.getElementById("theme-stylesheet");
     
             function loadFunction() {
+              //Get current cookie
               let theme = document.cookie;
               console.log(theme);
               if (theme === "theme=darkMode") {
@@ -57,6 +61,7 @@
               } else if (theme === "theme=lightMode") {
                 themeStylesheet.setAttribute("href", "styles.css");
               } else {
+                //if no cookies default to light mode
                 themeStylesheet.setAttribute("href", "styles.css");
               }
             }

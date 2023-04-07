@@ -11,6 +11,7 @@
     <script src="script.js"></script>
 </head>
 <body>
+  <!--Link to all other webpages-->
     <header>
         <table class="head">
             <th class="home"><a href="./index.html"><img class="favicon" src="./Pictures/up-and-down-arrows-colored.png" alt="home">Home Page</a></th>
@@ -19,10 +20,12 @@
         </table>
         <h1 class="website_name">Is It Up?</h1>
     </header>
+    <!--Where we will display the results of the search-->
     <section class="main_content">
         <h1 id="status-text" style="text-align: center;"></h1>
         <h1 id="stats" style="text-align: center;"></h1>
     </section>
+    <!--Where the footer information is stored-->
     <footer>
         <table class="bottom">
             <th class="creators">Created by: Ethan Penniman, Matthew Fairneny, Nicholas Bragdon, Brian Hoyt</th>
@@ -33,6 +36,7 @@
             const themeStylesheet = document.getElementById("theme-stylesheet");
     
             function loadFunction() {
+              //check cookies
               let theme = document.cookie;
               console.log(theme);
               if (theme === "theme=darkMode") {
@@ -40,6 +44,7 @@
               } else if (theme === "theme=lightMode") {
                 themeStylesheet.setAttribute("href", "styles.css");
               } else {
+                //if no cookies default to light mode
                 themeStylesheet.setAttribute("href", "styles.css");
               }
             }
